@@ -13,16 +13,16 @@
 
     <!-- Start Header  -->
 
-    <header>
-        <div class="container">
+    <header id="home">
+        <div id="container">
             <div class="logo-container">
-                <img src="./LOGO Arabic-01.png" alt="">
+                <a href="#home"><img id="imgContainer" src="./LOGO Arabic-01.png" alt=""></a>
             </div>
             <div class="nav-bar">
                 <ul>
                     <li> <a href="#home"> Home</a></li>
-                    <li> <a href="#home"> About</a></li>
-                    <li> <a href="#home"> Services</a></li>
+                    <li> <a href="#services"> About</a></li>
+                    <li> <a href="#services"> Services</a></li>
                     <li> <a href="#home"> Contact</a></li>
                     <li> <a href="#home"> Gallery</a></li>
                     <li> <a href="#home"> Help</a></li>
@@ -46,7 +46,7 @@
 
     <!-- Start Servicese  -->
 
-        <div class="services">
+        <div id="services">
 
             <div class="title">
                 <h1 data-text="Our Services"> Our Services</h1>
@@ -94,6 +94,32 @@
 
      <!-- End Servicese  -->
 
+
+     <script>
+         
+         window.onscroll = function() {scrollFunction()};
+
+         var navContainer = document.getElementById("container");
+         var imgContainer = document.getElementById("imgContainer");
+
+         function scrollFunction(){
+             if ( document.documentElement.scrollTop > 100){
+                 navContainer.style.top = "-35px";
+                 imgContainer.style.width = "120px";
+                 navContainer.style.background = "linear-gradient( to right, #530000c4, #8a0000c9, #530000c4)";
+                 navContainer.style.paddingTop = "0px";
+             }
+             else{
+                 navContainer.style.top = "0px";
+                 imgContainer.style.width = "200px";
+                 navContainer.style.background = "linear-gradient( to right, #ff010157, #ff000036, #ff000048)";
+                 navContainer.style.paddingTop = "5px";
+             }
+         }
+
+
+
+     </script>
   
 </body>
 </html>
