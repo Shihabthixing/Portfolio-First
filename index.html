@@ -35,7 +35,21 @@
 
     <!-- Start Section  -->
 
-    <section >
+    <section>
+        <div class="imageContainer">
+            <img src="./PmdesY.png" alt="graphic_designign">
+            <img src="./PmdesY 01.jpg" alt="grass_land">
+            <img src="./PmdesY 02.jpg" alt="wild_photography">
+            <img src="./PmdesY 03.jpg" alt="sea_wallpaper">
+
+            <div class="imgbtnContainer">
+                <span class="imgeBtn"></span>
+                <span class="imgeBtn"></span>
+                <span class="imgeBtn"></span>
+                <span class="imgeBtn"></span>
+            </div>
+        </div>
+        
         <div class="banner-container">
             <h1 class="wow fadeInRight">Lorem Ipsum ..?</h1>
             <h3 class="wow fadeInLeft">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sequi nesciunt vitae architecto mollitia cupiditate ipsam reiciendis dignissimos facere aut consectetur, enim incidunt quis debitis. Eveniet ex unde aliquam veniam?</h3>
@@ -103,17 +117,16 @@
          var imgContainer = document.getElementById("imgContainer");
 
          function scrollFunction(){
-             if ( document.documentElement.scrollTop > 100){
+             if ( document.documentElement.scrollTop > 80){
                  navContainer.style.top = "-35px";
                  imgContainer.style.width = "120px";
                  navContainer.style.background = "linear-gradient( to right, #530000c4, #8a0000c9, #530000c4)";
-                 navContainer.style.paddingTop = "0px";
              }
              else{
                  navContainer.style.top = "0px";
                  imgContainer.style.width = "200px";
                  navContainer.style.background = "linear-gradient( to right, #ff010157, #ff000036, #ff000048)";
-                 navContainer.style.paddingTop = "5px";
+                 navContainer.style.fontSize = "14px";
              }
          }
 
