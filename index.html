@@ -14,13 +14,12 @@
     <!-- Start Header  -->
 
     <header id="home">
-        <div id="container">
             <div class="logo-container">
                 <a href="#home"><img id="imgContainer" src="./LOGO Arabic-01.png" alt=""></a>
             </div>
             <div class="nav-bar">
                 <ul>
-                    <li> <a href="#home"> Home</a></li>
+                    <li> <a href="#homenav"> Home</a></li>
                     <li> <a href="#services"> About</a></li>
                     <li> <a href="#services"> Services</a></li>
                     <li> <a href="#home"> Contact</a></li>
@@ -28,37 +27,41 @@
                     <li> <a href="#home"> Help</a></li>
                 </ul>
             </div>
-        </div>
     </header>
 
     <!-- End Header  -->
 
     <!-- Start Section  -->
 
-    <section>
+    <section id="homenav">
         <div class="imageContainer">
-            <img src="./PmdesY.png" alt="graphic_designign">
-            <img src="./PmdesY 01.jpg" alt="grass_land">
-            <img src="./PmdesY 02.jpg" alt="wild_photography">
-            <img src="./PmdesY 03.jpg" alt="sea_wallpaper">
+            
+            <input type="radio" name="slider" id="img3">
+            <input type="radio" name="slider" id="img4">
+            
+            <img src="PmdesY 01.jpg" alt="img3"  class="m3">
+            <img src="PmdesY.png"    alt="img4"  class="m4">
 
-            <div class="imgbtnContainer">
-                <span class="imgeBtn"></span>
-                <span class="imgeBtn"></span>
-                <span class="imgeBtn"></span>
-                <span class="imgeBtn"></span>
-            </div>
         </div>
-        
+
+        <div class="dots">
+            <label for="img3"></label>
+            <label for="img4"></label>
+        </div>
+
+    </section>      
+    
+    <div class="banner">
         <div class="banner-container">
             <h1 class="wow fadeInRight">Lorem Ipsum ..?</h1>
             <h3 class="wow fadeInLeft">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sequi nesciunt vitae architecto mollitia cupiditate ipsam reiciendis dignissimos facere aut consectetur, enim incidunt quis debitis. Eveniet ex unde aliquam veniam?</h3>
         </div>
-    </section>                
+    </div>
+                  
 
     <!-- End Section  -->
 
-    <!-- Start Servicese  -->
+    <!-- Our Servicese  -->
 
         <div id="services">
 
@@ -72,67 +75,50 @@
                     <h2>Business Card </h2>
                     <p>Business cards are cards bearing business information about a company or individual. They are shared during formal introductions as a convenience</p>
                     <button>Done Business Cards</button>
+                    <div class="hoverline"></div>
                 </div>
                 <div class="card1">
                     <i class="fa fa-calendar" ></i>
                     <h2>Calendar Desing </h2>
                     <p>Business cards are cards bearing business information about a company or individual. They are shared during formal introductions as a convenience</p>
                     <button>Done Calendar Design</button>
+                    <div class="hoverline"></div>
                 </div>
                 <div class="card1">
                     <i class="fa fa-file-image-o" ></i>
                     <h2>Photo Graphics </h2>
                     <p>Business cards are cards bearing business information about a company or individual. They are shared during formal introductions as a convenience</p>
                     <button>Don Image editing</button>
+                    <div class="hoverline"></div>
                 </div>
                 <div class="card1">
                     <i class="fa fa-desktop" ></i>
                     <h2>Graphic Designing </h2>
                     <p>Business cards are cards bearing business information about a company or individual. They are shared during formal introductions as a convenience</p>
                     <button>Graphic Desing Works</button>
+                    <div class="hoverline"></div>
                 </div>
                 <div class="card1">
                     <i class="fa fa-cube"></i>
                     <h2>3D Designign</h2>
                     <p>Business cards are cards bearing business information about a company or individual. They are shared during formal introductions as a convenience</p>
                     <button> Open 3D works</button>
+                    <div class="hoverline"></div>
                 </div>
                 <div class="card1">
                     <i class="fa fa-mobile" ></i>
                     <h2>Website Creation </h2>
                     <p>Business cards are cards bearing business information about a company or individual. They are shared during formal introductions as a convenience</p>
                     <button>Web Designig</button>
+                    <div class="hoverline"></div>
                 </div>
             </div>
         </div>
 
-     <!-- End Servicese  -->
+     <!-- End Our Servicese  -->
 
 
-     <script>
-         
-         window.onscroll = function() {scrollFunction()};
-
-         var navContainer = document.getElementById("container");
-         var imgContainer = document.getElementById("imgContainer");
-
-         function scrollFunction(){
-             if ( document.documentElement.scrollTop > 80){
-                 navContainer.style.top = "-35px";
-                 imgContainer.style.width = "120px";
-                 navContainer.style.background = "linear-gradient( to right, #530000c4, #8a0000c9, #530000c4)";
-             }
-             else{
-                 navContainer.style.top = "0px";
-                 imgContainer.style.width = "200px";
-                 navContainer.style.background = "linear-gradient( to right, #ff010157, #ff000036, #ff000048)";
-                 navContainer.style.fontSize = "14px";
-             }
-         }
-
-
-
-     </script>
-  
+     <script src="./controls.js"> </script>
+   
 </body>
 </html>

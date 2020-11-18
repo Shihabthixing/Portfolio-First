@@ -2,7 +2,6 @@ body{
     margin: 0px;
     padding: 0px;
     background: #363636;
-    scroll-behavior: smooth;
 }
 *{
     text-decoration: none;
@@ -10,17 +9,16 @@ body{
     font-family: montserrat;
     box-sizing: border-box;
     outline: none;
-    margin: 0px;
-    padding: 0px;
     border: none;
+    scroll-behavior: smooth;
 }
 
 /* <!-- Start Header  -->  */
 
-#container{
+#home{
     width: 100%;
-    margin-top: 35px;
-    padding: 5px 150px;
+    margin: 30px 0px;
+    padding: 8px 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,7 +30,7 @@ body{
 }
 
 .logo-container #imgContainer{
-    width: 200px;
+    width: 150px;
     transition: .5s ease-in-out;
 }
 
@@ -40,10 +38,12 @@ body{
     display: inline-block;
     margin-left: 80px;
 }
+
 .nav-bar ul li a{
     color: white;
     font-weight: 300;
 }
+
 .nav-bar ul li a::before{
     content: '';
     background:#ff6060;
@@ -54,6 +54,7 @@ body{
     transition: .4s ease-in-out;
     display: inline-block;
 }
+
 .nav-bar ul li a:hover::before{
     width: 3.2%;
 }
@@ -62,46 +63,97 @@ body{
 
 /* <!-- Start Section  -->  */
 
-section .imageContainer img {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.imageContainer .m1, .m2, .m3, .m4{
     width: 100%;
     height: 100vh;
-    z-index: -2;
-    position: absolute;
+    z-index: -3;
+    position: fixed;
     top: 0px;
+    left: 0px;
+    transition: .6 ease-in-out;
 }
+
+
+
+
+
+
+#img3:checked ~ .m3{
+    margin-left: -200%;
+}
+#img4:checked ~ .m4{
+    margin-left: -300%;
+}
+
+.imageContainer input{
+    display: none;
+}
+
+
 
 .imageContainer::before{
     content: '';
     height: 100vh;
     width: 100%;
-    background: linear-gradient(to right, #ff000036, #00000050);
+    background: linear-gradient(to right, #d60d0ddc, #80068585);
     display: block;
     z-index: -1;
     position: absolute;
     top: 0px;
-}
-.imgbtnContainer{
-    background: red;
-    width: 100%;
-    height: 50px;
+    transition: 0.5s ease-in-out;
 }
 
-.banner-container{
-    max-width: 600px;
-    margin: auto;
-    text-align: center;
+
+.dots{
+    display: flex;
     position: absolute;
-    top: 35%;
+    bottom: 26%;
     left: 50%;
     transform: translateX(-50%);
+
+}
+label{
+    width: 12px;
+    height: 12px;
+    border: 1px solid white;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dots label:hover{
+    background: white;
+    transition: .4s ease-in-out;
+}
+
+
+
+
+
+/* <!-- End Section  -->  * /
+
+
+
+/* -----Stanr Banner -----0 */
+.banner{
+    width: 100%;
+    height: 100vh;
+    margin-top: -20px;
+}
+.banner-container{
+    max-width: 600px;
+    margin: 0px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
 }
 .banner-container h1{
+    margin: 25px 0px;
+    text-align: center;
     font-size: 70px;
     font-weight: 500;
-    color:#ff6060;
+    color:#cc4646;
     animation: rightLeft 2s ease-in-out;
     overflow: hidden;
 }
@@ -129,45 +181,45 @@ section .imageContainer img {
     margin: 0px auto;
 }
 
-/* <!-- End Section  -->  */
+/* -----End Banner -----0 */
 
 /* <!-- Start Servicese  -->  */
 
     #services{
-        max-width: 1300px;
-        margin: 0px auto;
-        padding-top: 40px;
-        margin-top: 100vh;
+        max-width: 100%;
+        height: 130vh;
+        background: #363636;
     }
     .title h1{
-        margin-top: 40px;
-        margin-left: auto;
-        margin-right: auto;
+        margin-top: 0px;
+        padding-top: 50px;
         text-align: center;
-        font-weight: 00;
         position: relative;
         background:  #363636;
         -webkit-background-clip: text;
-        color: transparent;
+        color: #363636;
+        z-index: 4;
      }
      .title h1::before{
          content: attr(data-text);
          position: absolute;
+         padding-top: 50px;
          top: 2px;
          color: transparent;
-         background: linear-gradient(to right, orange, red);
+         background: linear-gradient(to right, #ff7300, red, yellow);
          -webkit-background-clip: text;
          z-index: -1;
          filter: blur(2px);
      }
      .title h1::after{
         content: attr(data-text);
+        padding-top: 50px;
         position: absolute;
         top: 2px;
         left: 50%;
         transform: translateX(-50%);
         color: transparent;
-        background: linear-gradient(to right, orange, red);
+        background: linear-gradient(to right, orange, red, yellow);
        -webkit-background-clip: text;
         z-index: -2;
         filter: blur(4px);
@@ -176,7 +228,7 @@ section .imageContainer img {
 
     .containerTwo{
         max-width: 1400px ;
-        margin: 30px auto;
+        margin: 0px auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -187,12 +239,33 @@ section .imageContainer img {
         background: rgb(73, 73, 73);
         text-align: center;
         padding: 25px;
-        margin: 25px;
+        margin: 25px; 
+        overflow: hidden;  
     }
+
+    .hoverline{
+        width: 117%;
+        height: 3px;
+        background: #ff6060;
+        position: relative;
+        bottom: -25px;
+        left: -67%;
+        transform: translateX(-50%);  
+        transition: .6s ease-in-out; 
+    }
+    .card1:hover .hoverline{
+        left: 50%;     
+    }
+
+
     .card1 .fa{
         font-size: 25px;
         margin: 20px;
         color: #ff6060;
+        transition: .4s ease-in-out; 
+    }
+    .card1:hover .fa{
+        transform: scale(1.5);
     }
     .card1 h2{
         font-weight: 400;
@@ -208,6 +281,9 @@ section .imageContainer img {
         padding: 15px 20px;
         background:#ff6060 ;
         color: white;
-        margin: 25px 0px;
+        margin: 20px 0px;
+        cursor: pointer;
+        transition: .2s ease-in-out; 
     }
+  
 /* <!-- End Servicese  -->  */
